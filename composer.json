@@ -1,6 +1,7 @@
 {
     "name": "hexlet/code",
-    "type": "project",
+    "description": "cli application",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -12,5 +13,9 @@
             "email": "gennadiy.dev@yandex.ru"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
 }
