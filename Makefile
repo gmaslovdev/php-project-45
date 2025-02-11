@@ -4,5 +4,8 @@ install: # установка зависимостей
 brain-games: # отображение приветствия
 	bin/brain-games
 
-validate:
+validate: # валидация composer.json
 	composer validate
+
+lint:
+	composer exec --verbose phpcs -- --standard=PSR12 src bin
