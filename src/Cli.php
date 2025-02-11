@@ -11,3 +11,13 @@ function greeting(): void
     $name = prompt('May I have your name?');
     line('Hello, ' . $name . '!');
 }
+
+function askQuestion(string $question): string
+{
+    return prompt($question);
+}
+
+function printMessage(string $message): void
+{
+    line($message);
+}

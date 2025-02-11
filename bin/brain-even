@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+
+<?php
+
+use function BrainGames\Cli\greeting;
+use function BrainGames\Cli\printMessage;
+use function BrainGames\Game\start;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+const ROUNDS = 3;
+
+greeting();
+printMessage('Answer "yes" if the number is even, otherwise answer "no".');
+start(ROUNDS);
+//for ($i = 0; $i < 3; $i += 1) {
+//
+//}
