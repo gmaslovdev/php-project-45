@@ -9,12 +9,10 @@ use function Hexlet\Code\Cli\printCorrect;
 use function Hexlet\Code\Cli\printFailure;
 use function Hexlet\Code\Cli\printCompliment;
 
-
 function start(int $ROUNDS): void
 {
     # приветствие
-    greeting();
-
+    $playerName = greeting();
     # показываем правила
     printMessage('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -31,5 +29,5 @@ function start(int $ROUNDS): void
         }
         printFailure($userAnswer, $correctAnswer);
     }
-    printCompliment();
+    printCompliment($playerName);
 }

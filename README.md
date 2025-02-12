@@ -17,3 +17,10 @@ git clone git@github.com:gmaslovdev/php-project-45.git
 cd php-projct-45
 make install
 ```
+
+## Demo
+
+---
+
+### 1. brain-even
+[![asciicast](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH.svg)](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH)

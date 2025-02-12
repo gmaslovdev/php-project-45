@@ -5,13 +5,12 @@ namespace Hexlet\Code\Cli;
 use function cli\line;
 use function cli\prompt;
 
-$name = 'User';
-function greeting(): void
+function greeting(): string
 {
     line('Welcome to the Brain Games!');
-    global $name;
     $name = prompt('May I have your name?', '', ' ');
     line('Hello, ' . $name . '!');
+    return $name;
 }
 
 function askQuestion(string $question): string
@@ -33,8 +32,7 @@ function printFailure(string $wrong, string $correct): void
     line("'$wrong' is wrong answer ;(. Correct answer was '$correct'.");
 }
 
-function printCompliment(): void
+function printCompliment($name): void
 {
-    global $name;
     line('Congratulations ' . $name . '!');
 }
