@@ -10,7 +10,7 @@ function greeting(): void
 {
     line('Welcome to the Brain Games!');
     global $name;
-    $name = prompt('May I have your name?');
+    $name = prompt('May I have your name?', '', ' ');
     line('Hello, ' . $name . '!');
 }
 
@@ -30,7 +30,7 @@ function printCorrect(): void
 }
 function printFailure(string $wrong, string $correct): void
 {
-    line("'{$wrong}' is wrong answer ;(. Correct answer was '{$correct}'.");
+    line("'$wrong' is wrong answer ;(. Correct answer was '$correct'.");
 }
 
 function printCompliment(): void
