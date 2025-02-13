@@ -34,9 +34,10 @@ function printRight(): void
 {
     line('Correct!');
 }
-function printWrong(string $wrong, string $correct): void
+function printWrong(string $wrong, string $correct, string $name): void
 {
     line("'$wrong' is wrong answer ;(. Correct answer was '$correct'.");
+    line("Let's try again, $name!");
 }
 
 function printCongratulation(string $name): void

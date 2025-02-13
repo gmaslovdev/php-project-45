@@ -1,9 +1,6 @@
 install: # установка зависимостей
 	composer install
 
-brain-games: # отображение приветствия
-	bin/brain-games
-
 validate: # валидация composer.json
 	composer validate
 
@@ -15,3 +12,6 @@ brain-even: # запуск игры четный/нечетный
 
 brain-calc: # запуск игры калькулятор
 	bin/brain-calc
+
+brain-gcd: # запуск игры нахождение НОД
+	bin/brain-gcd

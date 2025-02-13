@@ -23,7 +23,10 @@ make install
 ---
 
 ### 1. brain-even
-[![asciicast](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH.svg)](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH)
+[![asciicast](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q.svg)](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q)
 
 ### 2. brain-calc
-[![asciicast](https://asciinema.org/a/zOYrdVL968SDslwiXjtGdMenE.svg)](https://asciinema.org/a/zOYrdVL968SDslwiXjtGdMenE)
+[![asciicast](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW.svg)](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW)
+
+### 3. brain-gcd
+[![asciicast](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH.svg)](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH)

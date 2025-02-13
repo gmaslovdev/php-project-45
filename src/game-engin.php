@@ -32,7 +32,7 @@ function start(string $rule, callable $getRound, int $rounds): void
             printRight();
             $correctAnswersCount += 1;
         } else {
-            printWrong($playerAnswer, $answer);
+            printWrong($playerAnswer, $answer, $playerName);
         }
     }
     printCongratulation($playerName);

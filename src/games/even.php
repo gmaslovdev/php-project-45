@@ -2,6 +2,7 @@
 
 namespace Hexlet\Code\Games\Even;
 
+use function Hexlet\Code\Utilities\isEven;
 use function Hexlet\Code\GameEngin\start;
 
 use const Hexlet\Code\Config\MIN_NUMBER;
@@ -18,7 +19,7 @@ function createQuestion($value): string
 
 function createAnswer($value): string
 {
-    return $value % 2 === 0 ? 'yes' : 'no';
+    return isEven($value) ? 'yes' : 'no';
 }
 
 function getRound(): array

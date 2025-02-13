@@ -10,6 +10,7 @@
             "src/cli.php",
             "src/games/calc.php",
             "src/games/even.php",
+            "src/games/gcd.php",
             "src/game-engin.php",
             "src/utilites.php",
             "src/config.php"

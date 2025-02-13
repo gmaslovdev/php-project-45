@@ -2,6 +2,7 @@
 
 namespace Hexlet\Code\Games\Calc;
 
+use function Hexlet\Code\Utilities\calculateInt;
 use function Hexlet\Code\Utilities\getRandomArrayElement;
 use function Hexlet\Code\GameEngin\start;
 
@@ -20,22 +21,18 @@ function createQuestion($a, $b, $operator): string
 
 function createAnswer($a, $b, $operator): string
 {
-    return match ($operator) {
-        '+' => (string) ($a + $b),
-        '-' => (string) ($a - $b),
-        '*' => (string) ($a * $b),
-    };
+    return (string) calculateInt($a, $b, $operator);
 }
 
 function getRound(): array
 {
     $operator = getRandomArrayElement(OPERATORS);
-    $min_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
-    $max_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+    $first_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+    $second_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
     return [
-        'question' => createQuestion($min_value, $max_value, $operator),
-        'answer' => createAnswer($min_value, $max_value, $operator),
+        'question' => createQuestion($first_value, $second_value, $operator),
+        'answer' => createAnswer($first_value, $second_value, $operator),
     ];
 }
 

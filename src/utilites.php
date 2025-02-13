@@ -2,8 +2,33 @@
 
 namespace Hexlet\Code\Utilities;
 
+function calculateInt(int $a, int $b, string $operator): int
+{
+    return match ($operator) {
+        '+' => $a + $b,
+        '-' => $a - $b,
+        '*' => $a * $b,
+    };
+}
+
 function getRandomArrayElement(array $arr)
 {
     $randIndex = mt_rand(0, count($arr) - 1);
     return $arr[$randIndex];
+}
+
+function isEven(int $value): bool
+{
+    return $value % 2 === 0;
+}
+
+function findGCD(int $a, int $b): int
+{
+    while ($b != 0) {
+        $temp = $b;
+        $b = $a % $b;
+        $a = $temp;
+    }
+
+    return $a;
 }
