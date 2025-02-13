@@ -10,6 +10,11 @@ function printIntroduction(): void
     line('Welcome to the Brain Games!');
 }
 
+function printMessage(string $text): void
+{
+    line($text);
+}
+
 function askName(): string
 {
     return prompt('May I have your name?', '', ' ');

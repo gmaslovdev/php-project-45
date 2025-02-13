@@ -24,3 +24,6 @@ make install
 
 ### 1. brain-even
 [![asciicast](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH.svg)](https://asciinema.org/a/opZ3ej4HWaZqEZ4D1cqsNcUuH)
+
+### 2. brain-calc
+[![asciicast](https://asciinema.org/a/zOYrdVL968SDslwiXjtGdMenE.svg)](https://asciinema.org/a/zOYrdVL968SDslwiXjtGdMenE)

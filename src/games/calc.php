@@ -3,16 +3,15 @@
 namespace Hexlet\Code\Games\Calc;
 
 use function Hexlet\Code\Utilities\getRandomArrayElement;
+use function Hexlet\Code\GameEngin\start;
 
-const OPERATORS = ['+', '-', '*'];
-const RULES = 'What is the result of the expression?';
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 15;
+use const Hexlet\Code\Config\OPERATORS;
+use const Hexlet\Code\Config\MIN_NUMBER;
+use const Hexlet\Code\Config\MAX_NUMBER;
+use const Hexlet\Code\Config\ROUNDS;
+use const Hexlet\Code\Config\RULES;
 
-function getRule(): string
-{
-    return RULES;
-}
+const GAME_TITLE = 'brain-calc';
 
 function createQuestion($a, $b, $operator): string
 {
@@ -31,19 +30,20 @@ function createAnswer($a, $b, $operator): string
 function getRound(): array
 {
     $operator = getRandomArrayElement(OPERATORS);
-    $a = mt_rand(MIN_NUMBER, MAX_NUMBER);
-    $b = mt_rand(MIN_NUMBER, MAX_NUMBER);
+    $min_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+    $max_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
     return [
-        'question' => createQuestion($a, $b, $operator),
-        'answer' => createAnswer($a, $b, $operator),
+        'question' => createQuestion($min_value, $max_value, $operator),
+        'answer' => createAnswer($min_value, $max_value, $operator),
     ];
 }
 
-function getData(): array
+function startGame(): void
 {
-    return [
-        'getRule' => fn() => getRule(),
-        'getRound' => fn() => getRound()
-    ];
+    start(
+        RULES[GAME_TITLE],
+        __NAMESPACE__ . '\getRound',
+        ROUNDS
+    );
 }
