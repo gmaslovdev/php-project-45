@@ -11,9 +11,14 @@ function calculateInt(int $a, int $b, string $operator): int
     };
 }
 
+function getRandomArrayIndex(array $arr): int
+{
+    return mt_rand(0, count($arr) - 1);
+}
+
 function getRandomArrayElement(array $arr)
 {
-    $randIndex = mt_rand(0, count($arr) - 1);
+    $randIndex = getRandomArrayIndex($arr);
     return $arr[$randIndex];
 }
 
