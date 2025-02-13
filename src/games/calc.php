@@ -6,7 +6,7 @@ use function Hexlet\Code\Utilities\calculateInt;
 use function Hexlet\Code\Utilities\getRandomArrayElement;
 use function Hexlet\Code\GameEngin\start;
 
-use const Hexlet\Code\Config\OPERATORS;
+use const Hexlet\Code\Config\CALC_OPERATORS;
 use const Hexlet\Code\Config\MIN_NUMBER;
 use const Hexlet\Code\Config\MAX_NUMBER;
 use const Hexlet\Code\Config\ROUNDS;
@@ -26,7 +26,7 @@ function createAnswer($a, $b, $operator): string
 
 function getRound(): array
 {
-    $operator = getRandomArrayElement(OPERATORS);
+    $operator = getRandomArrayElement(CALC_OPERATORS);
     $first_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
     $second_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 

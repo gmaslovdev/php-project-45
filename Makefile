@@ -15,3 +15,6 @@ brain-calc: # запуск игры калькулятор
 
 brain-gcd: # запуск игры нахождение НОД
 	bin/brain-gcd
+
+brain-progression: # запуск игры нахождение неизвестного прогрессии
+	bin/brain-progression

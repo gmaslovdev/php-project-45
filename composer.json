@@ -7,13 +7,14 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/cli.php",
             "src/games/calc.php",
             "src/games/even.php",
             "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/cli.php",
+            "src/config.php",
             "src/game-engin.php",
-            "src/utilites.php",
-            "src/config.php"
+            "src/utilites.php"
         ]
     },
     "authors": [
@@ -27,8 +28,10 @@
         "wp-cli/php-cli-tools": "^0.12.1"
     },
     "bin": [
-        "bin/brain-games",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-even",
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "4.0.x-dev"
