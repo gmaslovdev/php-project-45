@@ -27,6 +27,18 @@ function isEven(int $value): bool
     return $value % 2 === 0;
 }
 
+function getNumericalSequence(int $size, int $start, int $step): array
+{
+    $sequence = [];
+    $value = $start;
+    for ($i = 0; $i < $size; $i += 1) {
+        $sequence[] = $value;
+        $value += $step;
+    }
+
+    return $sequence;
+}
+
 function findGCD(int $a, int $b): int
 {
     while ($b != 0) {

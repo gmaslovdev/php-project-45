@@ -18,15 +18,24 @@ cd php-projct-45
 make install
 ```
 
-## Demo
+## Games:
 
 ---
 
 ### 1. brain-even
+```bash
+make brain-even
+```
 [![asciicast](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q.svg)](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q)
 
 ### 2. brain-calc
+```bash
+make brain-calc
+```
 [![asciicast](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW.svg)](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW)
 
 ### 3. brain-gcd
+```bash
+make brain-gcd
+```
 [![asciicast](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH.svg)](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH)
