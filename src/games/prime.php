@@ -10,12 +10,12 @@ use const Hexlet\Code\Config\MIN_PRIME_NUMBER;
 use const Hexlet\Code\Config\MAX_PRIME_NUMBER;
 use const Hexlet\Code\Config\PRIME_RULES;
 
-function createQuestion($value): string
+function createQuestion(int $value): string
 {
     return (string) $value;
 }
 
-function createAnswer($value): string
+function createAnswer(int $value): string
 {
     return isPrime($value) ? 'yes' : 'no';
 }

@@ -10,7 +10,7 @@ use const Hexlet\Code\Config\MIN_EVEN_NUMBER;
 use const Hexlet\Code\Config\MAX_EVEN_NUMBER;
 use const Hexlet\Code\Config\EVEN_RULES;
 
-function createQuestion($value): string
+function createQuestion(int $value): string
 {
     return (string) $value;
 }

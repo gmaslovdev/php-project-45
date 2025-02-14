@@ -10,12 +10,12 @@ use const Hexlet\Code\Config\MIN_GCD_NUMBER;
 use const Hexlet\Code\Config\MAX_GCD_NUMBER;
 use const Hexlet\Code\Config\GCD_RULES;
 
-function createQuestion($a, $b): string
+function createQuestion(int $a, int $b): string
 {
     return "$a $b";
 }
 
-function createAnswer($a, $b): string
+function createAnswer(int $a, int $b): string
 {
     return findGCD($a, $b);
 }

@@ -15,13 +15,13 @@ use const Hexlet\Code\Config\MIN_PROGRESSION_STEP;
 use const Hexlet\Code\Config\MAX_PROGRESSION_STEP;
 use const Hexlet\Code\Config\PROGRESSION_RULES;
 
-function createQuestion($sequence, $index): string
+function createQuestion(array $sequence, int $index): string
 {
     $sequence[$index] = '..';
     return implode(' ', $sequence);
 }
 
-function createAnswer($sequence, $index): string
+function createAnswer(array $sequence, int $index): string
 {
     return (string) $sequence[$index];
 }

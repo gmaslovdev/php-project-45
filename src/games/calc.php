@@ -12,12 +12,12 @@ use const Hexlet\Code\Config\MIN_CALC_NUMBER;
 use const Hexlet\Code\Config\MAX_CALC_NUMBER;
 use const Hexlet\Code\Config\CALC_RULES;
 
-function createQuestion($a, $b, $operator): string
+function createQuestion(int $a, int $b, string $operator): string
 {
     return "$a $operator $b";
 }
 
-function createAnswer($a, $b, $operator): string
+function createAnswer(int $a, int $b, string $operator): string
 {
     return (string) calculateInt($a, $b, $operator);
 }
