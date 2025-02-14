@@ -22,9 +22,9 @@ function start(string $rule, callable $getRound, int $rounds): void
     $playerName = askName();
     printGreeting($playerName);
     printMessage($rule);
-    $correctAnswersCount = 0;
+    $roundsCount = 0;
 
-    while ($correctAnswersCount < $rounds) {
+    while ($roundsCount < $rounds) {
         ['answer' => $answer, 'question' => $question] = $getRound();
 
         $playerAnswer = askQuestion($question);
@@ -34,7 +34,7 @@ function start(string $rule, callable $getRound, int $rounds): void
             exit(0);
         }
         printRight();
-        $correctAnswersCount += 1;
+        $roundsCount += 1;
     }
     printCongratulation($playerName);
 }

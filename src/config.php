@@ -17,7 +17,7 @@ const MIN_EVEN_NUMBER = 1;
 const MAX_EVEN_NUMBER = 199;
 
 #gcd
-const GCD_RULES = 'Find the greatest common divisor of given numbers';
+const GCD_RULES = 'Find the greatest common divisor of given numbers.';
 const MIN_GCD_NUMBER = 10;
 const MAX_GCD_NUMBER = 75;
 
