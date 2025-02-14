@@ -21,6 +21,11 @@ git clone git@github.com:gmaslovdev/php-project-45.git
 cd php-projct-45
 make install
 ```
+## Greeting:
+```bash
+make brain-games
+```
+[![asciicast](https://asciinema.org/a/lush8gS8ouOkSLTmAQjgI83rP.svg)](https://asciinema.org/a/lush8gS8ouOkSLTmAQjgI83rP)
 
 ## Games:
 
@@ -30,26 +35,28 @@ make install
 ```bash
 make brain-even
 ```
-[![asciicast](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q.svg)](https://asciinema.org/a/A91N6nHCY1XWDd1iM6t6ubO7q)
+[![asciicast](https://asciinema.org/a/J4feGnJ26yyYEHlDwIZxMN2Iw.svg)](https://asciinema.org/a/J4feGnJ26yyYEHlDwIZxMN2Iw)
 
 ### 2. brain-calc
 ```bash
 make brain-calc
 ```
-[![asciicast](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW.svg)](https://asciinema.org/a/X4tSdrXbMOKC9ZbXbkdbkXPkW)
+[![asciicast](https://asciinema.org/a/zoSeEGLAzCL3Xp8KJUsjpTwxM.svg)](https://asciinema.org/a/zoSeEGLAzCL3Xp8KJUsjpTwxM)
 
 ### 3. brain-gcd
 ```bash
 make brain-gcd
 ```
-[![asciicast](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH.svg)](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH)
+[![asciicast](https://asciinema.org/a/t6nt01nk5X70UggcnDAdVGfHJ.svg)](https://asciinema.org/a/t6nt01nk5X70UggcnDAdVGfHJ)
+
 ### 4. brain-prime
 ```bash
 make brain-prime
 ```
-[![asciicast](https://asciinema.org/a/KtDT0BAvPUSSwsEaXhJ2o67Uc.svg)](https://asciinema.org/a/KtDT0BAvPUSSwsEaXhJ2o67Uc)
+[![asciicast](https://asciinema.org/a/iWdA7kScznhOZsba3QtvwDujp.svg)](https://asciinema.org/a/iWdA7kScznhOZsba3QtvwDujp)
+
 ### 5. brain-progression
 ```bash
 make brain-progression
 ```
-[![asciicast](https://asciinema.org/a/lsf8lZtariFhLdN8FSrlywe7Q.svg)](https://asciinema.org/a/lsf8lZtariFhLdN8FSrlywe7Q)
+[![asciicast](https://asciinema.org/a/o4mvp8kCZIfY2l9wHc8pJG6f5.svg)](https://asciinema.org/a/o4mvp8kCZIfY2l9wHc8pJG6f5)
