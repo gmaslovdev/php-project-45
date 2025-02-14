@@ -21,6 +21,11 @@ const GCD_RULES = 'Find the greatest common divisor of given numbers';
 const MIN_GCD_NUMBER = 10;
 const MAX_GCD_NUMBER = 75;
 
+#prime
+const PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN_PRIME_NUMBER = 1;
+const MAX_PRIME_NUMBER = 99;
+
 # progression
 const PROGRESSION_RULES = 'What number is missing in the progression?';
 const MIN_PROGRESSION_SIZE = 5;

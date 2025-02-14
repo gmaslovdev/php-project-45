@@ -1,3 +1,7 @@
+# Brain-games
+
+A console application with simple logic games.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/gmaslovdev/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/gmaslovdev/php-project-45/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c93148754cecfb92f193/maintainability)](https://codeclimate.com/github/gmaslovdev/php-project-45/maintainability)
@@ -39,8 +43,12 @@ make brain-calc
 make brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH.svg)](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH)
-
-### 4. brain-progression
+### 4. brain-prime
+```bash
+make brain-prime
+```
+[![asciicast](https://asciinema.org/a/KtDT0BAvPUSSwsEaXhJ2o67Uc.svg)](https://asciinema.org/a/KtDT0BAvPUSSwsEaXhJ2o67Uc)
+### 5. brain-progression
 ```bash
 make brain-progression
 ```
