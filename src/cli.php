@@ -27,7 +27,8 @@ function printGreeting(string $name): void
 
 function askQuestion(string $question): string
 {
-    return prompt($question);
+    printMessage("Question: $question");
+    return prompt("Your answer");
 }
 
 function printRight(): void
