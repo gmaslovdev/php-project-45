@@ -16,7 +16,7 @@ function getRandomArrayIndex(array $arr): int
     return mt_rand(0, count($arr) - 1);
 }
 
-function getRandomArrayElement(array $arr)
+function getRandomArrayElement(array $arr): int
 {
     $randIndex = getRandomArrayIndex($arr);
     return $arr[$randIndex];

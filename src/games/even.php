@@ -15,7 +15,7 @@ function createQuestion(int $value): string
     return (string) $value;
 }
 
-function createAnswer($value): string
+function createAnswer(int $value): string
 {
     return isEven($value) ? 'yes' : 'no';
 }
