@@ -24,7 +24,7 @@ function createAnswer(int $a, int $b, string $operator): string
 
 function getRound(): array
 {
-    $operator = getRandomArrayElement(CALC_OPERATORS);
+    $operator = (string) getRandomArrayElement(CALC_OPERATORS);
     $first_value = mt_rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
     $second_value = mt_rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
 

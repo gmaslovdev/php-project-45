@@ -8,6 +8,7 @@ function calculateInt(int $a, int $b, string $operator): int
         '+' => $a + $b,
         '-' => $a - $b,
         '*' => $a * $b,
+        default => '',
     };
 }
 
