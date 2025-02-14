@@ -43,5 +43,5 @@ function printWrong(string $wrong, string $correct, string $name): void
 
 function printCongratulation(string $name): void
 {
-    line('Congratulations ' . $name . '!');
+    line('Congratulations, ' . $name . '!');
 }
