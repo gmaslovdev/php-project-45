@@ -37,7 +37,7 @@ function printRight(): void
 }
 function printWrong(string $wrong, string $correct, string $name): void
 {
-    line("'$wrong' is wrong answer ;(. Correct answer was '$correct'.");
+    line("\"$wrong\" is wrong answer ;(. Correct answer was \"$correct\".");
     line("Let's try again, $name!");
 }
 
