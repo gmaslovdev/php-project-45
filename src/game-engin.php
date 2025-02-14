@@ -28,12 +28,13 @@ function start(string $rule, callable $getRound, int $rounds): void
         ['answer' => $answer, 'question' => $question] = $getRound();
 
         $playerAnswer = askQuestion($question);
-        if (checkAnswer($playerAnswer, $answer)) {
-            printRight();
-            $correctAnswersCount += 1;
-        } else {
+
+        if (!checkAnswer($playerAnswer, $answer)) {
             printWrong($playerAnswer, $answer, $playerName);
+            exit(0);
         }
+        printRight();
+        $correctAnswersCount += 1;
     }
     printCongratulation($playerName);
 }
