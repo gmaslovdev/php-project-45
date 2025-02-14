@@ -12,6 +12,7 @@
             "src/games/gcd.php",
             "src/games/prime.php",
             "src/games/progression.php",
+            "src/brain-games.php",
             "src/cli.php",
             "src/config.php",
             "src/game-engin.php",
@@ -31,6 +32,7 @@
     "bin": [
         "bin/brain-calc",
         "bin/brain-even",
+        "bin/brain-games",
         "bin/brain-gcd",
         "bin/brain-prime",
         "bin/brain-progression"

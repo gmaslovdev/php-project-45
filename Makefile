@@ -7,6 +7,9 @@ validate: # валидация composer.json
 lint: # проверка кода на соответствие PSR12
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
 
+brain-games: # приветствие пользователя
+	bin/brain-games
+
 brain-even: # запуск игры четный/нечетный
 	bin/brain-even
 
