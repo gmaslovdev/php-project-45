@@ -39,3 +39,9 @@ make brain-calc
 make brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH.svg)](https://asciinema.org/a/DRrACyhYGl2TIRlRwd4ulUpEH)
+
+### 4. brain-progression
+```bash
+make brain-progression
+```
+[![asciicast](https://asciinema.org/a/lsf8lZtariFhLdN8FSrlywe7Q.svg)](https://asciinema.org/a/lsf8lZtariFhLdN8FSrlywe7Q)

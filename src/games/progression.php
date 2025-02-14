@@ -3,16 +3,17 @@
 namespace Hexlet\Code\Games\Progression;
 
 use function Hexlet\Code\GameEngin\start;
-
 use function Hexlet\Code\Utilities\getNumericalSequence;
 use function Hexlet\Code\Utilities\getRandomArrayIndex;
 
-use const Hexlet\Code\Config\MIN_NUMBER;
-use const Hexlet\Code\Config\MAX_NUMBER;
 use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\RULES;
-
-const GAME_TITLE = 'brain-progression';
+use const Hexlet\Code\Config\MIN_PROGRESSION_SIZE;
+use const Hexlet\Code\Config\MAX_PROGRESSION_SIZE;
+use const Hexlet\Code\Config\MAX_PROGRESSION_START;
+use const Hexlet\Code\Config\MIN_PROGRESSION_START;
+use const Hexlet\Code\Config\MIN_PROGRESSION_STEP;
+use const Hexlet\Code\Config\MAX_PROGRESSION_STEP;
+use const Hexlet\Code\Config\PROGRESSION_RULES;
 
 function createQuestion($sequence, $index): string
 {
@@ -27,7 +28,11 @@ function createAnswer($sequence, $index): string
 
 function getRound(): array
 {
-    $sequence = getNumericalSequence(10, 3, 3);
+    $size = mt_rand(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
+    $start = mt_rand(MIN_PROGRESSION_START, MAX_PROGRESSION_START);
+    $step = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
+
+    $sequence = getNumericalSequence($size, $start, $step);
     $index = getRandomArrayIndex($sequence);
 
     return [
@@ -39,7 +44,7 @@ function getRound(): array
 function startGame(): void
 {
     start(
-        RULES[GAME_TITLE],
+        PROGRESSION_RULES,
         __NAMESPACE__ . '\getRound',
         ROUNDS
     );

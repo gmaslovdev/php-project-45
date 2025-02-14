@@ -5,12 +5,10 @@ namespace Hexlet\Code\Games\Even;
 use function Hexlet\Code\Utilities\isEven;
 use function Hexlet\Code\GameEngin\start;
 
-use const Hexlet\Code\Config\MIN_NUMBER;
-use const Hexlet\Code\Config\MAX_NUMBER;
 use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\RULES;
-
-const GAME_TITLE = 'brain-even';
+use const Hexlet\Code\Config\MIN_EVEN_NUMBER;
+use const Hexlet\Code\Config\MAX_EVEN_NUMBER;
+use const Hexlet\Code\Config\EVEN_RULES;
 
 function createQuestion($value): string
 {
@@ -24,7 +22,7 @@ function createAnswer($value): string
 
 function getRound(): array
 {
-    $value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+    $value = mt_rand(MIN_EVEN_NUMBER, MAX_EVEN_NUMBER);
 
     return [
         'question' => createQuestion($value),
@@ -35,7 +33,7 @@ function getRound(): array
 function startGame(): void
 {
     start(
-        RULES[GAME_TITLE],
+        EVEN_RULES,
         __NAMESPACE__ . '\getRound',
         ROUNDS
     );
