@@ -1,14 +1,25 @@
 <?php
 
-namespace Hexlet\Code\Games\Gcd;
+namespace Php\Project\Games\Gcd;
 
-use function Hexlet\Code\Utilities\findGCD;
-use function Hexlet\Code\GameEngin\start;
+use function Php\Project\GameEngine\start;
 
-use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\MIN_GCD_NUMBER;
-use const Hexlet\Code\Config\MAX_GCD_NUMBER;
-use const Hexlet\Code\Config\GCD_RULES;
+const ROUNDS_COUNT = 3;
+
+const RULES = 'Find the greatest common divisor of given numbers.';
+const MIN_NUMBER = 10;
+const MAX_NUMBER = 75;
+
+function findGCD(int $a, int $b): int
+{
+    while ($b != 0) {
+        $temp = $b;
+        $b = $a % $b;
+        $a = $temp;
+    }
+
+    return $a;
+}
 
 function createQuestion(int $a, int $b): string
 {
@@ -20,22 +31,24 @@ function createAnswer(int $a, int $b): string
     return findGCD($a, $b);
 }
 
-function getRound(): array
+function createGetRound(): callable
 {
-    $first_value = mt_rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
-    $second_value = mt_rand(MIN_GCD_NUMBER, MAX_GCD_NUMBER);
+    return function (): array {
+        $first_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $second_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
-    return [
-        'question' => createQuestion($first_value, $second_value),
-        'answer' => createAnswer($first_value, $second_value),
-    ];
+        return [
+            'question' => createQuestion($first_value, $second_value),
+            'answer' => createAnswer($first_value, $second_value),
+        ];
+    };
 }
 
 function startGame(): void
 {
     start(
-        GCD_RULES,
-        __NAMESPACE__ . '\getRound',
-        ROUNDS
+        RULES,
+        createGetRound(),
+        ROUNDS_COUNT
     );
 }

@@ -1,44 +1,67 @@
 <?php
 
-namespace Hexlet\Code\Games\Calc;
+namespace Php\Project\Games\Calc;
 
-use function Hexlet\Code\Utilities\calculateInt;
-use function Hexlet\Code\Utilities\getRandomArrayElement;
-use function Hexlet\Code\GameEngin\start;
+use Exception;
 
-use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\CALC_OPERATORS;
-use const Hexlet\Code\Config\MIN_CALC_NUMBER;
-use const Hexlet\Code\Config\MAX_CALC_NUMBER;
-use const Hexlet\Code\Config\CALC_RULES;
+use function Php\Project\GameEngine\start;
+
+const ROUNDS_COUNT = 3;
+const RULES = 'What is the result of the expression?';
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 15;
+const OPERATORS = ['+', '-', '*'];
+
+/**
+ * @throws Exception
+ */
+function calculateInt(int $a, int $b, string $operator): int
+{
+    return match ($operator) {
+        '+' => $a + $b,
+        '-' => $a - $b,
+        '*' => $a * $b,
+        default => throw new Exception("Unknown operator. '$operator' given."),
+    };
+}
+
+function getRandomArrayElement(array $arr): string | int
+{
+    return $arr[mt_rand(0, count($arr) - 1)];
+}
 
 function createQuestion(int $a, int $b, string $operator): string
 {
     return "$a $operator $b";
 }
 
+/**
+ * @throws Exception
+ */
 function createAnswer(int $a, int $b, string $operator): string
 {
     return (string) calculateInt($a, $b, $operator);
 }
 
-function getRound(): array
+function createGetRound(): callable
 {
-    $operator = (string) getRandomArrayElement(CALC_OPERATORS);
-    $first_value = mt_rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
-    $second_value = mt_rand(MIN_CALC_NUMBER, MAX_CALC_NUMBER);
+    return function (): array {
+        $operator = (string) getRandomArrayElement(OPERATORS);
+        $first_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $second_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
-    return [
-        'question' => createQuestion($first_value, $second_value, $operator),
-        'answer' => createAnswer($first_value, $second_value, $operator),
-    ];
+        return [
+            'question' => createQuestion($first_value, $second_value, $operator),
+            'answer' => createAnswer($first_value, $second_value, $operator),
+        ];
+    };
 }
 
 function startGame(): void
 {
     start(
-        CALC_RULES,
-        __NAMESPACE__ . '\getRound',
-        ROUNDS
+        RULES,
+        createGetRound(),
+        ROUNDS_COUNT
     );
 }

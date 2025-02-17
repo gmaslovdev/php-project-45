@@ -1,14 +1,19 @@
 <?php
 
-namespace Hexlet\Code\Games\Even;
+namespace Php\Project\Games\Even;
 
-use function Hexlet\Code\Utilities\isEven;
-use function Hexlet\Code\GameEngin\start;
+use function Php\Project\GameEngine\start;
 
-use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\MIN_EVEN_NUMBER;
-use const Hexlet\Code\Config\MAX_EVEN_NUMBER;
-use const Hexlet\Code\Config\EVEN_RULES;
+const ROUNDS_COUNT = 3;
+
+const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 199;
+
+function isEven(int $value): bool
+{
+    return $value % 2 === 0;
+}
 
 function createQuestion(int $value): string
 {
@@ -20,21 +25,23 @@ function createAnswer(int $value): string
     return isEven($value) ? 'yes' : 'no';
 }
 
-function getRound(): array
+function createGetRound(): callable
 {
-    $value = mt_rand(MIN_EVEN_NUMBER, MAX_EVEN_NUMBER);
+    return function (): array {
+        $value = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
-    return [
-        'question' => createQuestion($value),
-        'answer' => createAnswer($value),
-    ];
+        return [
+            'question' => createQuestion($value),
+            'answer' => createAnswer($value),
+        ];
+    };
 }
 
 function startGame(): void
 {
     start(
-        EVEN_RULES,
-        __NAMESPACE__ . '\getRound',
-        ROUNDS
+        RULES,
+        createGetRound(),
+        ROUNDS_COUNT
     );
 }

@@ -3,9 +3,6 @@
     "description": "cli application",
     "license": "GPL-3.0-or-later",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/games/calc.php",
             "src/games/even.php",
@@ -13,10 +10,7 @@
             "src/games/prime.php",
             "src/games/progression.php",
             "src/brain-games.php",
-            "src/cli.php",
-            "src/config.php",
-            "src/game-engin.php",
-            "src/utilites.php"
+            "src/game-engine.php"
         ]
     },
     "authors": [

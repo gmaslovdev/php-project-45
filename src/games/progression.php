@@ -1,19 +1,29 @@
 <?php
 
-namespace Hexlet\Code\Games\Progression;
+namespace Php\Project\Games\Progression;
 
-use function Hexlet\Code\GameEngin\start;
-use function Hexlet\Code\Utilities\getNumericalSequence;
-use function Hexlet\Code\Utilities\getRandomArrayIndex;
+use function Php\Project\GameEngine\start;
 
-use const Hexlet\Code\Config\ROUNDS;
-use const Hexlet\Code\Config\MIN_PROGRESSION_SIZE;
-use const Hexlet\Code\Config\MAX_PROGRESSION_SIZE;
-use const Hexlet\Code\Config\MAX_PROGRESSION_START;
-use const Hexlet\Code\Config\MIN_PROGRESSION_START;
-use const Hexlet\Code\Config\MIN_PROGRESSION_STEP;
-use const Hexlet\Code\Config\MAX_PROGRESSION_STEP;
-use const Hexlet\Code\Config\PROGRESSION_RULES;
+const ROUNDS_COUNT = 3;
+
+const RULES = 'What number is missing in the progression?';
+const MIN_PROGRESSION_SIZE = 5;
+const MAX_PROGRESSION_SIZE = 10;
+
+const MIN_PROGRESSION_START = 3;
+const MAX_PROGRESSION_START = 11;
+
+const MIN_PROGRESSION_STEP = 2;
+const MAX_PROGRESSION_STEP = 8;
+
+function getNumericalSequence(int $size, int $start, int $step): array
+{
+    $sequence = [];
+    for ($i = 0; $i < $size; $i += 1) {
+        $sequence[] = $start + $i * $step;
+    }
+    return $sequence;
+}
 
 function createQuestion(array $sequence, int $index): string
 {
@@ -26,26 +36,28 @@ function createAnswer(array $sequence, int $index): string
     return (string) $sequence[$index];
 }
 
-function getRound(): array
+function createGetRound(): callable
 {
-    $size = mt_rand(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
-    $start = mt_rand(MIN_PROGRESSION_START, MAX_PROGRESSION_START);
-    $step = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
+    return function (): array {
+        $size = mt_rand(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
+        $start = mt_rand(MIN_PROGRESSION_START, MAX_PROGRESSION_START);
+        $step = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
 
-    $sequence = getNumericalSequence($size, $start, $step);
-    $index = getRandomArrayIndex($sequence);
+        $sequence = getNumericalSequence($size, $start, $step);
+        $index = mt_rand(0, count($sequence) - 1);
 
-    return [
-        'question' => createQuestion($sequence, $index),
-        'answer' => createAnswer($sequence, $index),
-    ];
+        return [
+            'question' => createQuestion($sequence, $index),
+            'answer' => createAnswer($sequence, $index),
+        ];
+    };
 }
 
 function startGame(): void
 {
     start(
-        PROGRESSION_RULES,
-        __NAMESPACE__ . '\getRound',
-        ROUNDS
+        RULES,
+        createGetRound(),
+        ROUNDS_COUNT
     );
 }

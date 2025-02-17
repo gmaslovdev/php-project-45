@@ -1,14 +1,13 @@
 <?php
 
-namespace Hexlet\Code\BrainGames;
+namespace Php\Project\BrainGames;
 
-use function Hexlet\Code\Cli\askName;
-use function Hexlet\Code\Cli\printGreeting;
-use function Hexlet\Code\Cli\printIntroduction;
+use function cli\line;
+use function cli\prompt;
 
 function greeting(): void
 {
-    printIntroduction();
-    $playerName = askName();
-    printGreeting($playerName);
+    line('Welcome to the Brain Games!');
+    $playerName = prompt('May I have your name?', '', ' ');
+    line("Hello, $playerName!");
 }

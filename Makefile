@@ -1,26 +1,26 @@
-install: # установка зависимостей
+install:
 	composer install
 
-validate: # валидация composer.json
+validate:
 	composer validate
 
-lint: # проверка кода на соответствие PSR12
+lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
 
-brain-games: # приветствие пользователя
+brain-games:
 	bin/brain-games
 
-brain-even: # запуск игры четный/нечетный
+brain-even:
 	bin/brain-even
 
-brain-calc: # запуск игры калькулятор
+brain-calc:
 	bin/brain-calc
 
-brain-gcd: # запуск игры нахождение НОД
+brain-gcd:
 	bin/brain-gcd
 
-brain-prime: # запуск и игры определение простого числа
+brain-prime:
 	bin/brain-prime
 
-brain-progression: # запуск игры нахождение неизвестного прогрессии
+brain-progression:
 	bin/brain-progression
