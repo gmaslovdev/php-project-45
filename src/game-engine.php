@@ -10,14 +10,14 @@ function checkAnswer(string $playerAnswer, string $answer): bool
     return $playerAnswer === $answer;
 }
 
-function start(string $rule, callable $getRound, int $rounds): void
+function start(string $rule, callable $getRound, int $roundsCount): void
 {
     line('Welcome to the Brain Games!');
     $playerName = prompt('May I have your name?', '', ' ');
     line("Hello, $playerName!");
     line($rule);
 
-    for ($i = 0; $i < $rounds; $i += 1) {
+    for ($i = 0; $i < $roundsCount; $i += 1) {
         ['answer' => $answer, 'question' => $question] = $getRound();
 
         $playerAnswer = prompt("Question: $question\nYour answer");

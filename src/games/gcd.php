@@ -28,18 +28,18 @@ function createQuestion(int $a, int $b): string
 
 function createAnswer(int $a, int $b): string
 {
-    return findGCD($a, $b);
+    return (string) findGCD($a, $b);
 }
 
 function createGetRound(): callable
 {
     return function (): array {
-        $first_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        $second_value = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $firstValue = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $secondValue = mt_rand(MIN_NUMBER, MAX_NUMBER);
 
         return [
-            'question' => createQuestion($first_value, $second_value),
-            'answer' => createAnswer($first_value, $second_value),
+            'question' => createQuestion($firstValue, $secondValue),
+            'answer' => createAnswer($firstValue, $secondValue),
         ];
     };
 }
